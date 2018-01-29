@@ -526,7 +526,7 @@ var LocalizeParser = (function () {
         if (!this._translationObject) {
             return key;
         }
-        var res = this._translationObject[this.prefix + key];
+        var res = this.translate.getParsedResult(this._translationObject, this.prefix + key);
         return res || key;
     };
     return LocalizeParser;
